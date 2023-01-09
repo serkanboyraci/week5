@@ -23,7 +23,7 @@
 		603929A4295F0DCE00B817F2 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		603929A5295F0DCE00B817F2 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		603929A8296067A400B817F2 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
-		6065E24C295D875200723DBB /* week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6065E24C295D875200723DBB /* week5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6065E24F295D875200723DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6065E251295D875200723DBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6065E253295D875200723DBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		6065E243295D875200723DBB = {
 			isa = PBXGroup;
 			children = (
-				6065E24E295D875200723DBB /* week5 */,
+				6065E24E295D875200723DBB /* week4 */,
 				6065E24D295D875200723DBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,35 +56,35 @@
 		6065E24D295D875200723DBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6065E24C295D875200723DBB /* week4.app */,
+				6065E24C295D875200723DBB /* week5.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6065E24E295D875200723DBB /* week5 */ = {
+		6065E24E295D875200723DBB /* week4 */ = {
 			isa = PBXGroup;
 			children = (
-				603929A8296067A400B817F2 /* Coin.swift */,
 				6065E24F295D875200723DBB /* AppDelegate.swift */,
 				6065E251295D875200723DBB /* SceneDelegate.swift */,
+				6065E25A295D875300723DBB /* LaunchScreen.storyboard */,
+				6065E258295D875300723DBB /* Assets.xcassets */,
+				6065E25D295D875300723DBB /* Info.plist */,
 				6065E253295D875200723DBB /* ViewController.swift */,
 				6065E263295DA34E00723DBB /* TableViewController.swift */,
 				6065E255295D875200723DBB /* Main.storyboard */,
-				6065E258295D875300723DBB /* Assets.xcassets */,
-				6065E25A295D875300723DBB /* LaunchScreen.storyboard */,
-				6065E25D295D875300723DBB /* Info.plist */,
 				603929A4295F0DCE00B817F2 /* UserCell.swift */,
 				603929A5295F0DCE00B817F2 /* UserCell.xib */,
+				603929A8296067A400B817F2 /* Coin.swift */,
 			);
-			path = week5;
+			path = week4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6065E24B295D875200723DBB /* week4 */ = {
+		6065E24B295D875200723DBB /* week5 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6065E260295D875300723DBB /* Build configuration list for PBXNativeTarget "week4" */;
+			buildConfigurationList = 6065E260295D875300723DBB /* Build configuration list for PBXNativeTarget "week5" */;
 			buildPhases = (
 				6065E248295D875200723DBB /* Sources */,
 				6065E249295D875200723DBB /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = week4;
+			name = week5;
 			productName = week4;
-			productReference = 6065E24C295D875200723DBB /* week4.app */;
+			productReference = 6065E24C295D875200723DBB /* week5.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6065E24B295D875200723DBB /* week4 */,
+				6065E24B295D875200723DBB /* week5 */,
 			);
 		};
 /* End PBXProject section */
@@ -364,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6065E260295D875300723DBB /* Build configuration list for PBXNativeTarget "week4" */ = {
+		6065E260295D875300723DBB /* Build configuration list for PBXNativeTarget "week5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6065E261295D875300723DBB /* Debug */,
