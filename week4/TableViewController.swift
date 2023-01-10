@@ -11,6 +11,23 @@ class TableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var departments: [Department] = [
+        .init(name: "IT",
+              users: [
+                .init(name: "Esrfghfghjhgjghjhgjghjghjhgjghjghjgjgjhgjhgjghjghjghghjghjghghjghjhgjghjghjghhhhhghgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjghjhgjhgjhgjghjhgjghjhgjhgjghjghjhgjhjghjhgjhghghghgjghjhgjghjghjghjghjghjghjghjghjghjhgjghjghjhgjghjghja", id: "1"),
+                .init(name: "Serkan", id: "2"),
+                .init(name: "Kerem", id: "3"),
+              ]
+             ),
+        .init(name: "HR",
+              users: [
+                .init(name: "Busra", id: "1"),
+                .init(name: "Ayla", id: "2"),
+                .init(name: "Memo", id: "3"),
+              ]
+             )
+    ]
+    
     private var coins: [Coin] = []
     //private var users: [User] = [] // in normal app, we have empty array and we take data lately
     
@@ -35,7 +52,7 @@ class TableViewController: UIViewController {
             self.tableView.reloadData() // we must add this, to refresh data.
         }*/
       
-        fetchData()
+        //fetchData()
     }
     private func fetchData() {
         if let url = URL(string: "https://api.coingecko.com/api/v3/coins/list") {
@@ -76,30 +93,58 @@ class TableViewController: UIViewController {
 }
 
 extension TableViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // you can select row.
-        let coin = coins[indexPath.row]
-        print("\(indexPath.row) - \(coin.name ?? "")") // print its index 0,1,2
-    }
+    //func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // you can select row.
+    //    let coin = coins[indexPath.row]
+    //    print("\(indexPath.row) - \(coin.name ?? "")") // print its index 0,1,2
+    //}
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableView.automaticDimension // means automatically grows as cell
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50 // to give header height
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? { // to give view for header
+        let containerView = UIView()
+        containerView.backgroundColor = .systemBlue
+    
+        let label = UILabel()
+        label.backgroundColor = .red
+        label.translatesAutoresizingMaskIntoConstraints = false // we must do it false to use constraints.
+        label.text = departments[section].name
+        label.font = .systemFont(ofSize: 20, weight: .bold)
+        containerView.addSubview(label) // to add label in containerview
+        
+        // to give constraints
+       // NSLayoutConstraint.init(item: <#T##Any#>, attribute: <#T##NSLayoutConstraint.Attribute#>, relatedBy: <#T##NSLayoutConstraint.Relation#>, toItem: <#T##Any?#>, attribute: <#T##NSLayoutConstraint.Attribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>) //difficult way, we used SnapKit instead of this.
+        // difficult way
+        
+        NSLayoutConstraint.activate([ //easy way
+            label.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 0),
+            label.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+            label.topAnchor.constraint(equalTo: containerView.topAnchor,constant: 10),
+            label.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+        ])
+        
+        return containerView // we add label in the containerView
+    }
+    
 }
 
 extension TableViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return departments.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coins.count
+        return departments[section].users.count //to reach each departments section users count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCellIdentifier", for: indexPath) as! UserCell
-        
-        cell.userNameLabel.text = coins[indexPath.row].name // we can reach XIB usernameLabel
-        
+        let user : User = departments[indexPath.section].users[indexPath.row]
+        //cell.userNameLabel.text = coins[indexPath.row].name // we can reach XIB usernameLabel
+        cell.userNameLabel.text = user.name // to write only names.
         return cell
         
         /*let cell = UITableViewCell()
@@ -126,4 +171,9 @@ extension TableViewController: UITableViewDataSource {
 struct User {
     let name : String
     let id : String
+}
+
+struct Department {
+    let name : String
+    let users : [User]
 }
