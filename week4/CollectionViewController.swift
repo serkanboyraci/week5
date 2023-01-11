@@ -65,6 +65,12 @@ class CollectionViewController: UIViewController {
     
 }
 
+extension CollectionViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { // you can define each items size
+        return .init(width: collectionView.frame.width/2, height: collectionView.frame.height/2)
+    }
+}
+
 extension CollectionViewController : UICollectionViewDelegate {
     
 }

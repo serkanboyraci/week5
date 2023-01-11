@@ -20,8 +20,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Peg-7w-23H">
                         <rect key="frame" x="0.0" y="0.0" width="476" height="384"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GaJ-Fh-KrD">
-                                <rect key="frame" x="118" y="16" width="240" height="240"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GaJ-Fh-KrD">
+                                <rect key="frame" x="118" y="71.333333333333314" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="5cn-Mj-2D0"/>
                                     <constraint firstAttribute="height" constant="240" id="CpD-og-fgI"/>
@@ -30,7 +30,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75K-Ym-d4U">
-                                <rect key="frame" x="16" y="272" width="444" height="20.333333333333314"/>
+                                <rect key="frame" x="16" y="328" width="444" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,10 +39,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="75K-Ym-d4U" firstAttribute="leading" secondItem="Peg-7w-23H" secondAttribute="leading" constant="16" id="1xX-he-RD9"/>
-                            <constraint firstItem="GaJ-Fh-KrD" firstAttribute="centerX" secondItem="Peg-7w-23H" secondAttribute="centerX" id="JBe-M7-AF1"/>
+                            <constraint firstItem="GaJ-Fh-KrD" firstAttribute="centerX" secondItem="Peg-7w-23H" secondAttribute="centerX" id="B1P-XE-tVi"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="75K-Ym-d4U" secondAttribute="bottom" constant="16" id="ezF-Io-WJO"/>
                             <constraint firstAttribute="trailing" secondItem="75K-Ym-d4U" secondAttribute="trailing" constant="16" id="fYR-Ip-QE4"/>
-                            <constraint firstItem="GaJ-Fh-KrD" firstAttribute="top" secondItem="Peg-7w-23H" secondAttribute="top" constant="16" id="pJk-Zp-i9G"/>
+                            <constraint firstItem="GaJ-Fh-KrD" firstAttribute="centerY" secondItem="Peg-7w-23H" secondAttribute="centerY" id="r5p-nf-4Pf"/>
                             <constraint firstItem="75K-Ym-d4U" firstAttribute="top" secondItem="GaJ-Fh-KrD" secondAttribute="bottom" constant="16" id="yVy-cB-T4I"/>
                         </constraints>
                     </view>
@@ -64,6 +64,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="trash.fill" catalog="system" width="119" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
