@@ -56,26 +56,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T6N-eI-3C6">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-pT-nzT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KKv-nU-4mH"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bvh-Yb-uqv" id="IJq-Kv-de0"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Df-jm-VSB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="T6N-eI-3C6" firstAttribute="centerX" secondItem="qQf-Ib-WW7" secondAttribute="centerX" id="8dz-L1-DXx"/>
-                            <constraint firstItem="T6N-eI-3C6" firstAttribute="top" secondItem="9Df-jm-VSB" secondAttribute="top" id="IkY-wm-Abu"/>
-                            <constraint firstItem="T6N-eI-3C6" firstAttribute="bottom" secondItem="9Df-jm-VSB" secondAttribute="bottom" id="d9J-XN-U4a"/>
-                            <constraint firstItem="T6N-eI-3C6" firstAttribute="leading" secondItem="9Df-jm-VSB" secondAttribute="leading" id="nxz-g2-ddO"/>
+                            <constraint firstItem="T6N-eI-3C6" firstAttribute="top" secondItem="BEV-pT-nzT" secondAttribute="bottom" id="4yo-1P-6LI"/>
+                            <constraint firstItem="T6N-eI-3C6" firstAttribute="bottom" secondItem="9Df-jm-VSB" secondAttribute="bottom" id="7pC-WN-AY4"/>
+                            <constraint firstItem="BEV-pT-nzT" firstAttribute="trailing" secondItem="T6N-eI-3C6" secondAttribute="trailing" id="MEo-BU-Suw"/>
+                            <constraint firstItem="BEV-pT-nzT" firstAttribute="leading" secondItem="T6N-eI-3C6" secondAttribute="leading" id="eNA-Ck-I8L"/>
+                            <constraint firstAttribute="trailing" secondItem="BEV-pT-nzT" secondAttribute="trailing" id="h3d-s1-LsD"/>
+                            <constraint firstItem="BEV-pT-nzT" firstAttribute="top" secondItem="9Df-jm-VSB" secondAttribute="top" id="iVY-wh-8Ii"/>
+                            <constraint firstItem="BEV-pT-nzT" firstAttribute="leading" secondItem="qQf-Ib-WW7" secondAttribute="leading" id="xna-Dq-kVY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="BEV-pT-nzT" id="SId-GE-rBZ"/>
                         <outlet property="tableView" destination="T6N-eI-3C6" id="lqA-43-h1q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7n6-St-dKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="4"/>
+            <point key="canvasLocation" x="870.99236641221376" y="3.5211267605633805"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="foE-Sd-4ow">

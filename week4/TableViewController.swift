@@ -11,10 +11,12 @@ class TableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var departments: [Department] = [
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    /*private var departments: [Department] = [
         .init(name: "IT",
               users: [
-                .init(name: "Esrfghfghjhgjghjhgjghjghjhgjghjghjgjgjhgjhgjghjghjghghjghjghghjghjhgjghjghjghhhhhghgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjhgjghjhgjhgjhgjghjhgjghjhgjhgjghjghjhgjhjghjhgjhghghghgjghjhgjghjghjghjghjghjghjghjghjghjhgjghjghjhgjghjghja", id: "1"),
+                .init(name: "Esra", id: "1"),
                 .init(name: "Serkan", id: "2"),
                 .init(name: "Kerem", id: "3"),
               ]
@@ -26,9 +28,10 @@ class TableViewController: UIViewController {
                 .init(name: "Memo", id: "3"),
               ]
              )
-    ]
+    ]*/
     
     private var coins: [Coin] = []
+    private var filteredCoins : [Coin] = [] // to filer by search bar and show that data
     //private var users: [User] = [] // in normal app, we have empty array and we take data lately
     
     override func viewDidLoad() {
@@ -41,6 +44,8 @@ class TableViewController: UIViewController {
         tableView.separatorStyle = .none // to delete seperator between cells
         
         tableView.register(.init(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCellIdentifier")// we decide identifier name.
+        
+        searchBar.delegate = self
      
         /*DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { // taking data and waiting
             self.users = [
@@ -52,7 +57,7 @@ class TableViewController: UIViewController {
             self.tableView.reloadData() // we must add this, to refresh data.
         }*/
       
-        //fetchData()
+        fetchData()
     }
     private func fetchData() {
         if let url = URL(string: "https://api.coingecko.com/api/v3/coins/list") {
@@ -78,6 +83,7 @@ class TableViewController: UIViewController {
                     let coins = try
                     JSONDecoder().decode([Coin].self, from: data) // we use JSONDecoder object as a Array, we use square bracket for Coin
                     self.coins = coins
+                    
                     DispatchQueue.main.async { // we enter background thread,
                       // if we want to UICompenent such as tableView, we must call from mainthread
                       self.tableView.reloadData()
@@ -89,6 +95,20 @@ class TableViewController: UIViewController {
             }
           task.resume() // we must use this, otherwise after a while code will not run.
           }
+    }
+}
+
+extension TableViewController : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredCoins = coins.filter{ ($0.name ?? "").contains(searchText) } // to filter by search bar and defined in filteredCoins
+        tableView.reloadData() // you must add this code
+        /*var tempCoins : [Coin] = []  //difficult long way
+        for coin in coins {
+            if (coin.name ?? "").contains(searchText) {
+                tempCoins.append(coin)
+            }
+        }
+        filteredCoins = tempCoins*/
     }
 }
 
@@ -111,7 +131,7 @@ extension TableViewController: UITableViewDelegate {
         let label = UILabel()
         label.backgroundColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false // we must do it false to use constraints.
-        label.text = departments[section].name
+        //label.text = departments[section].name
         label.font = .systemFont(ofSize: 20, weight: .bold)
         containerView.addSubview(label) // to add label in containerview
         
@@ -134,17 +154,17 @@ extension TableViewController: UITableViewDelegate {
 extension TableViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return departments.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return departments[section].users.count //to reach each departments section users count
+        return filteredCoins.count //to reach each departments section users count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCellIdentifier", for: indexPath) as! UserCell
-        let user : User = departments[indexPath.section].users[indexPath.row]
+        //let user : User = departments[indexPath.section].users[indexPath.row]
         //cell.userNameLabel.text = coins[indexPath.row].name // we can reach XIB usernameLabel
-        cell.userNameLabel.text = user.name // to write only names.
+        cell.userNameLabel.text = coins[indexPath.row].name // to write only names.
         return cell
         
         /*let cell = UITableViewCell()
