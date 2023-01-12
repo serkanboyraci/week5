@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -130,7 +131,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwu-bx-h7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="730"/>
+            <point key="canvasLocation" x="1172" y="676"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="5Lm-hY-ufB">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="HZ9-9t-zP5" customClass="MapViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2u-CF-YD6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wv6-jS-Evb">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8rx-2k-EAR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8rx-2k-EAR" firstAttribute="bottom" secondItem="wv6-jS-Evb" secondAttribute="bottom" id="6kx-9j-4KB"/>
+                            <constraint firstItem="wv6-jS-Evb" firstAttribute="leading" secondItem="8rx-2k-EAR" secondAttribute="leading" id="7b6-lM-Xff"/>
+                            <constraint firstItem="wv6-jS-Evb" firstAttribute="top" secondItem="8rx-2k-EAR" secondAttribute="top" id="fhj-lr-fnW"/>
+                            <constraint firstItem="8rx-2k-EAR" firstAttribute="trailing" secondItem="wv6-jS-Evb" secondAttribute="trailing" id="gcY-Gs-cc4"/>
+                            <constraint firstItem="wv6-jS-Evb" firstAttribute="leading" secondItem="8rx-2k-EAR" secondAttribute="leading" id="qIS-S3-O28"/>
+                            <constraint firstAttribute="trailing" secondItem="wv6-jS-Evb" secondAttribute="trailing" id="sc1-kC-5Rb"/>
+                            <constraint firstItem="8rx-2k-EAR" firstAttribute="bottom" secondItem="wv6-jS-Evb" secondAttribute="bottom" id="vRl-Qo-n5a"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="qmg-gf-LQ2"/>
+                    <connections>
+                        <outlet property="mapView" destination="wv6-jS-Evb" id="lDz-I2-xcI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HU3-MT-ddO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="1464"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="foE-Sd-4ow">
@@ -184,6 +219,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iiE-xs-gLe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rey-pT-LRA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -191,11 +227,12 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Tjf-FP-FDM"/>
                         <segue destination="bvh-Yb-uqv" kind="relationship" relationship="viewControllers" id="M1P-tF-hQw"/>
                         <segue destination="bCF-Q3-PiM" kind="relationship" relationship="viewControllers" id="IcD-dL-N75"/>
+                        <segue destination="HZ9-9t-zP5" kind="relationship" relationship="viewControllers" id="ATL-0b-zcg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPq-D3-mER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-143" y="373"/>
         </scene>
     </scenes>
     <resources>
