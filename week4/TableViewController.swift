@@ -30,8 +30,8 @@ class TableViewController: UIViewController {
              )
     ]*/
     
-    private var coins: [Coin] = []
-    private var filteredCoins : [Coin] = [] // to filer by search bar and show that data
+    private var coins: [CoinCellModel] = []
+    private var filteredCoins : [CoinCellModel] = [] // to filer by search bar and show that data
     //private var users: [User] = [] // in normal app, we have empty array and we take data lately
     
     override func viewDidLoad() {
@@ -80,9 +80,9 @@ class TableViewController: UIViewController {
 }
                 if let data = data {
                   do {
-                    let coins = try
+                    let apiCoins = try
                     JSONDecoder().decode([Coin].self, from: data) // we use JSONDecoder object as a Array, we use square bracket for Coin
-                    self.coins = coins
+                    self.coins = apiCoins.map{ .init(name: $0.name ?? "") } // we transform coin type to coinCellModel type
                     
                     DispatchQueue.main.async { // we enter background thread,
                       // if we want to UICompenent such as tableView, we must call from mainthread
@@ -100,7 +100,7 @@ class TableViewController: UIViewController {
 
 extension TableViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredCoins = coins.filter{ ($0.name ?? "").contains(searchText) } // to filter by search bar and defined in filteredCoins
+        filteredCoins = coins.filter{ ($0.name).contains(searchText) } // to filter by search bar and defined in filteredCoins
         tableView.reloadData() // you must add this code
         /*var tempCoins : [Coin] = []  //difficult long way
         for coin in coins {
@@ -188,12 +188,16 @@ extension TableViewController: UITableViewDataSource {
     }
 }
 
-struct User {
-    let name : String
-    let id : String
-}
+//struct User {
+//    let name : String
+//    let id : String
+//}
 
-struct Department {
-    let name : String
-    let users : [User]
+//struct Department {
+//struct    let name : String
+//struct    let users : [User]
+//struct}
+
+struct CoinCellModel { // we take name fieald. because we will show it only.
+    let name : String //we dont need othe symbol and id field in our TableView.
 }

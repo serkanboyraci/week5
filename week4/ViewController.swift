@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             
             let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
             //if let vc = storyBoard.instantiateViewController(withIdentifier: "TableViewController") as? TableViewController {
-            if let vc = storyBoard.instantiateViewController(withIdentifier: "TableViewController") as? TableViewController {
+            if let vc = storyBoard.instantiateViewController(withIdentifier: "CollectionViewController") as? CollectionViewController {
                 vc.modalPresentationStyle = .fullScreen // to see full screen TableViewVC
                 present(vc, animated: true)
             }

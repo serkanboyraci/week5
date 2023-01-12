@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iiE-xs-gLe">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-6O-aq3">
-                                <rect key="frame" x="57" y="584" width="297" height="87"/>
+                                <rect key="frame" x="57" y="584" width="297" height="38"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="NEXT">
@@ -39,15 +39,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Yx-6O-aq3" secondAttribute="bottom" constant="147" id="qyj-np-VKT"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" selectedImage="homekit" id="P8Z-tS-7vq"/>
                     <connections>
                         <outlet property="nextButton" destination="8Yx-6O-aq3" id="OTC-7s-A0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1042" y="-797"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Coins-->
         <scene sceneID="meW-s9-fv8">
             <objects>
                 <viewController storyboardIdentifier="TableViewController" id="bvh-Yb-uqv" customClass="TableViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T6N-eI-3C6">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-pT-nzT">
@@ -82,6 +83,7 @@
                             <constraint firstItem="BEV-pT-nzT" firstAttribute="leading" secondItem="qQf-Ib-WW7" secondAttribute="leading" id="xna-Dq-kVY"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Coins" image="bitcoinsign" catalog="system" selectedImage="bitcoinsign" id="nwq-fk-agk"/>
                     <connections>
                         <outlet property="searchBar" destination="BEV-pT-nzT" id="SId-GE-rBZ"/>
                         <outlet property="tableView" destination="T6N-eI-3C6" id="lqA-43-h1q"/>
@@ -89,7 +91,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7n6-St-dKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870.99236641221376" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1172" y="4"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="hEK-Wm-GxK">
+            <objects>
+                <viewController id="bCF-Q3-PiM" customClass="WebViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4qJ-3i-jA4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVC-uE-0I4">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3iI-GX-G4v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DVC-uE-0I4" firstAttribute="bottom" secondItem="3iI-GX-G4v" secondAttribute="bottom" id="47f-Ri-fIR"/>
+                            <constraint firstItem="DVC-uE-0I4" firstAttribute="trailing" secondItem="3iI-GX-G4v" secondAttribute="trailing" id="5Cf-DR-5MS"/>
+                            <constraint firstItem="DVC-uE-0I4" firstAttribute="top" secondItem="3iI-GX-G4v" secondAttribute="top" id="KAA-rx-bfY"/>
+                            <constraint firstItem="DVC-uE-0I4" firstAttribute="leading" secondItem="3iI-GX-G4v" secondAttribute="leading" id="itY-kD-cYi"/>
+                            <constraint firstItem="DVC-uE-0I4" firstAttribute="leading" secondItem="3iI-GX-G4v" secondAttribute="leading" id="ncN-SG-Rh9"/>
+                            <constraint firstItem="DVC-uE-0I4" firstAttribute="top" secondItem="3iI-GX-G4v" secondAttribute="top" id="oBU-AE-CYG"/>
+                            <constraint firstItem="3iI-GX-G4v" firstAttribute="trailing" secondItem="DVC-uE-0I4" secondAttribute="trailing" id="pAO-ZR-gwQ"/>
+                            <constraint firstItem="3iI-GX-G4v" firstAttribute="bottom" secondItem="DVC-uE-0I4" secondAttribute="bottom" id="vLg-7x-La6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web" image="person.icloud" catalog="system" selectedImage="person.icloud" id="ige-ai-vRP"/>
+                    <connections>
+                        <outlet property="webView" destination="DVC-uE-0I4" id="jUg-I1-3nJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwu-bx-h7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="730"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="foE-Sd-4ow">
@@ -135,10 +176,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="059-KK-em3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731" y="4"/>
+            <point key="canvasLocation" x="2657.2519083969464" y="3.5211267605633805"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="F7g-TF-Qmy">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iiE-xs-gLe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rey-pT-LRA">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Tjf-FP-FDM"/>
+                        <segue destination="bvh-Yb-uqv" kind="relationship" relationship="viewControllers" id="M1P-tF-hQw"/>
+                        <segue destination="bCF-Q3-PiM" kind="relationship" relationship="viewControllers" id="IcD-dL-N75"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPq-D3-mER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bitcoinsign" catalog="system" width="85" height="128"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="person.icloud" catalog="system" width="128" height="90"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
