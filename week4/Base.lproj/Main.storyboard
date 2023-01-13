@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-6O-aq3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yx-6O-aq3">
                                 <rect key="frame" x="56" y="693" width="297" height="34.333333333333371"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
@@ -48,16 +48,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8Yx-6O-aq3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="0Sp-z3-0LP"/>
+                            <constraint firstItem="8Yx-6O-aq3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="0Sp-z3-0LP"/>
                             <constraint firstItem="50J-7m-HJy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="7f6-Mb-Rkv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="50J-7m-HJy" secondAttribute="trailing" constant="16" id="9Zs-8i-zTR"/>
                             <constraint firstItem="lTr-r5-MMJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6Y-b7-adG"/>
                             <constraint firstItem="lTr-r5-MMJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SmO-Wg-KUS"/>
                             <constraint firstItem="lTr-r5-MMJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ab8-oj-PLS"/>
                             <constraint firstItem="lTr-r5-MMJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="eQU-a7-571"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Yx-6O-aq3" secondAttribute="trailing" constant="39" id="feH-cz-9HC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Yx-6O-aq3" secondAttribute="trailing" constant="40" id="feH-cz-9HC"/>
                             <constraint firstItem="lTr-r5-MMJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jyy-uI-srq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Yx-6O-aq3" secondAttribute="bottom" constant="147" id="qyj-np-VKT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Yx-6O-aq3" secondAttribute="bottom" constant="41.666666666666629" id="qyj-np-VKT"/>
                             <constraint firstItem="50J-7m-HJy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vz0-bI-5dA"/>
                         </constraints>
                     </view>
