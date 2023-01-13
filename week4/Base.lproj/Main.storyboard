@@ -30,24 +30,36 @@
                                     <action selector="nextButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5e-5z-xVw"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50J-7m-HJy">
+                                <rect key="frame" x="16" y="75" width="361" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="aua-Km-uGv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8Yx-6O-aq3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="0Sp-z3-0LP"/>
                             <constraint firstItem="8Yx-6O-aq3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="525" id="3oa-NQ-KFL"/>
+                            <constraint firstItem="50J-7m-HJy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="7f6-Mb-Rkv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="50J-7m-HJy" secondAttribute="trailing" constant="16" id="9Zs-8i-zTR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Yx-6O-aq3" secondAttribute="trailing" constant="39" id="feH-cz-9HC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Yx-6O-aq3" secondAttribute="bottom" constant="147" id="qyj-np-VKT"/>
+                            <constraint firstItem="50J-7m-HJy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vz0-bI-5dA"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" selectedImage="homekit" id="P8Z-tS-7vq"/>
                     <connections>
                         <outlet property="nextButton" destination="8Yx-6O-aq3" id="OTC-7s-A0l"/>
+                        <outlet property="textField" destination="50J-7m-HJy" id="bvC-hb-168"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="-797"/>
+            <point key="canvasLocation" x="1041.9847328244275" y="-797.18309859154931"/>
         </scene>
         <!--Coins-->
         <scene sceneID="meW-s9-fv8">

@@ -10,16 +10,20 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // tcNoTextField.delegate = self
-        //tcNoTextField.addTarget(self, action: #selector(didTextFieldChange), for: .editingChanged)
-        // every editing time, enter selector func and print.
-        // }
+        textField.addTarget(self, action: #selector(didTextChange), for: .editingChanged)
+        textField.text = UserDefaults.standard.string(forKey: "mainScreenTextFieldValue") // save for this key.
+    }
+    
+    @objc private func didTextChange() {
+        let text = textField.text
+        UserDefaults.standard.set(text, forKey: "mainScreenTextFieldValue") // keep value with key, like dicts. // you cant use this key-value pari immediately. you must wait a bit.
+        //UserDefaults.standard.synchronize() // to save the words, dont need any more
     }
         
     @IBAction func nextButtonClicked(_ sender: Any) {
