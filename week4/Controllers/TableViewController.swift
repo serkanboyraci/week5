@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TableViewController: UIViewController {
 
@@ -57,7 +58,8 @@ class TableViewController: UIViewController {
             self.tableView.reloadData() // we must add this, to refresh data.
         }*/
       
-        fetchData()
+        //fetchData()
+        fetchDataWithAF()
     }
     private func fetchData() {
         if let url = URL(string: "https://api.coingecko.com/api/v3/coins/list") {
@@ -65,7 +67,7 @@ class TableViewController: UIViewController {
             request.httpMethod = "GET"
             
             let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                if error != nil {
+                if error != nil { // we are in background thread.
                   
                   DispatchQueue.main.async {
                     let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: .alert)
@@ -95,6 +97,14 @@ class TableViewController: UIViewController {
             }
           task.resume() // we must use this, otherwise after a while code will not run.
           }
+    }
+    private func fetchDataWithAF() {
+        AF.request("https://api.coingecko.com/api/v3/coins/list").responseDecodable(of: [Coin].self) {
+            (res) in
+            guard let apiCoins = res.value else {return} // value = [Coin]
+            self.coins = apiCoins.map{ .init(name: $0.name ?? "") } // we transform coin type to coinCellModel type //no need to write mainthread. alamofir do it main thread.
+            self.tableView.reloadData()
+        }
     }
 }
 
