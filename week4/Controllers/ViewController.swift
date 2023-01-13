@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Kingfisher
+import Alamofire
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
@@ -18,6 +21,7 @@ class ViewController: UIViewController {
         
         textField.addTarget(self, action: #selector(didTextChange), for: .editingChanged)
         textField.text = UserDefaults.standard.string(forKey: "mainScreenTextFieldValue") // save for this key.
+        imageView.kf.setImage(with:URL.init(string: "https://rickandmortyapi.com/api/character/avatar/2.jpeg")) //kf comes from kingfisher.
     }
     
     @objc private func didTextChange() {
