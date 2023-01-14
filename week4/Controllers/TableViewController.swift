@@ -84,7 +84,7 @@ class TableViewController: UIViewController {
                   do {
                     let apiCoins = try
                     JSONDecoder().decode([Coin].self, from: data) // we use JSONDecoder object as a Array, we use square bracket for Coin
-                    self.coins = apiCoins.map{ .init(name: $0.name ?? "") } // we transform coin type to coinCellModel type
+                    self.coins = apiCoins.map{ .init(name: $0.xxxx ?? "") } // we transform coin type to coinCellModel type
                     
                     DispatchQueue.main.async { // we enter background thread,
                       // if we want to UICompenent such as tableView, we must call from mainthread
@@ -102,7 +102,7 @@ class TableViewController: UIViewController {
         AF.request("https://api.coingecko.com/api/v3/coins/list").responseDecodable(of: [Coin].self) {
             (res) in
             guard let apiCoins = res.value else {return} // value = [Coin]
-            self.coins = apiCoins.map{ .init(name: $0.name ?? "") } // we transform coin type to coinCellModel type //no need to write mainthread. alamofir do it main thread.
+            self.coins = apiCoins.map{ .init(name: $0.xxxx ?? "") } // we transform coin type to coinCellModel type //no need to write mainthread. alamofir do it main thread.
             self.tableView.reloadData()
         }
     }

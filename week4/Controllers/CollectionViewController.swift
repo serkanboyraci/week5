@@ -83,7 +83,7 @@ extension CollectionViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        cell.titleLabel.text = coins[indexPath.row].name
+        cell.titleLabel.text = coins[indexPath.row].xxxx
         return cell
         
     }

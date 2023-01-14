@@ -4,8 +4,8 @@
 target 'week5' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-pod 'Kingfisher', '~> 7.0'
-pod 'Alamofire', '~> 5.6'
+  pod 'Kingfisher', '~> 7.0'
+  pod 'Alamofire', '~> 5.6'
 
 
 end
