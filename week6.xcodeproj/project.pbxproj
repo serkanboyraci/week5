@@ -25,6 +25,10 @@
 		60B0E17829709EB700346FA0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B0E17729709EB700346FA0 /* MapViewController.swift */; };
 		60B0E180297201E200346FA0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 60B0E17F297201E200346FA0 /* SDWebImage */; };
 		60B0E182297201E200346FA0 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 60B0E181297201E200346FA0 /* SDWebImageMapKit */; };
+		60B0E1AD2975435F00346FA0 /* CoinModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B0E1AC2975435F00346FA0 /* CoinModuleViewModel.swift */; };
+		60B0E1AF297543E200346FA0 /* CoinModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B0E1AE297543E200346FA0 /* CoinModuleModel.swift */; };
+		60B0E1B2297544C300346FA0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 60B0E1B1297544C300346FA0 /* Alamofire */; };
+		60B0E1B52975465D00346FA0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 60B0E1B42975465D00346FA0 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +36,7 @@
 		603929A4295F0DCE00B817F2 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		603929A5295F0DCE00B817F2 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		603929A8296067A400B817F2 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
-		6065E24C295D875200723DBB /* week5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6065E24C295D875200723DBB /* week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6065E24F295D875200723DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6065E251295D875200723DBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6065E253295D875200723DBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 		60B0E172296E180E00346FA0 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		60B0E175296EE9DD00346FA0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		60B0E17729709EB700346FA0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		60B0E1AC2975435F00346FA0 /* CoinModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModuleViewModel.swift; sourceTree = "<group>"; };
+		60B0E1AE297543E200346FA0 /* CoinModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModuleModel.swift; sourceTree = "<group>"; };
 		A6804D32A2C08BC9E611D025 /* Pods-week5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-week5.debug.xcconfig"; path = "Target Support Files/Pods-week5/Pods-week5.debug.xcconfig"; sourceTree = "<group>"; };
 		BC7F3891E35C55F4EFB3907E /* Pods-week5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-week5.release.xcconfig"; path = "Target Support Files/Pods-week5/Pods-week5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,8 +62,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60B0E180297201E200346FA0 /* SDWebImage in Frameworks */,
+				60B0E1B2297544C300346FA0 /* Alamofire in Frameworks */,
 				60B0E182297201E200346FA0 /* SDWebImageMapKit in Frameworks */,
 				433DC0B000C1A1AC5CC2E62B /* Pods_week5.framework in Frameworks */,
+				60B0E1B52975465D00346FA0 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +94,7 @@
 		6065E24D295D875200723DBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6065E24C295D875200723DBB /* week5.app */,
+				6065E24C295D875200723DBB /* week6.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		6065E24E295D875200723DBB /* week4 */ = {
 			isa = PBXGroup;
 			children = (
+				60B0E1AB2975433700346FA0 /* CoinModule */,
 				60B0E17D2970A08900346FA0 /* Models */,
 				60B0E17C29709FEC00346FA0 /* Delegates */,
 				60B0E17B29709F2900346FA0 /* Custom Cells */,
@@ -110,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				6065E253295D875200723DBB /* ViewController.swift */,
-				6065E263295DA34E00723DBB /* TableViewController.swift */,
 				60B0E16F296E0FFF00346FA0 /* CollectionViewController.swift */,
 				60B0E175296EE9DD00346FA0 /* WebViewController.swift */,
 				60B0E17729709EB700346FA0 /* MapViewController.swift */,
@@ -146,6 +154,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		60B0E1AB2975433700346FA0 /* CoinModule */ = {
+			isa = PBXGroup;
+			children = (
+				6065E263295DA34E00723DBB /* TableViewController.swift */,
+				60B0E1AC2975435F00346FA0 /* CoinModuleViewModel.swift */,
+				60B0E1AE297543E200346FA0 /* CoinModuleModel.swift */,
+			);
+			path = CoinModule;
+			sourceTree = "<group>";
+		};
 		C921ADA918F752AA5D1DD38D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6065E24B295D875200723DBB /* week5 */ = {
+		6065E24B295D875200723DBB /* week6 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6065E260295D875300723DBB /* Build configuration list for PBXNativeTarget "week5" */;
+			buildConfigurationList = 6065E260295D875300723DBB /* Build configuration list for PBXNativeTarget "week6" */;
 			buildPhases = (
 				711A83515047C5D9DDC316DB /* [CP] Check Pods Manifest.lock */,
 				6065E248295D875200723DBB /* Sources */,
@@ -171,13 +189,15 @@
 			);
 			dependencies = (
 			);
-			name = week5;
+			name = week6;
 			packageProductDependencies = (
 				60B0E17F297201E200346FA0 /* SDWebImage */,
 				60B0E181297201E200346FA0 /* SDWebImageMapKit */,
+				60B0E1B1297544C300346FA0 /* Alamofire */,
+				60B0E1B42975465D00346FA0 /* Kingfisher */,
 			);
 			productName = week4;
-			productReference = 6065E24C295D875200723DBB /* week5.app */;
+			productReference = 6065E24C295D875200723DBB /* week6.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,12 +226,14 @@
 			mainGroup = 6065E243295D875200723DBB;
 			packageReferences = (
 				60B0E17E297201E200346FA0 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				60B0E1B0297544C300346FA0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				60B0E1B32975465D00346FA0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 6065E24D295D875200723DBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6065E24B295D875200723DBB /* week5 */,
+				6065E24B295D875200723DBB /* week6 */,
 			);
 		};
 /* End PBXProject section */
@@ -282,7 +304,9 @@
 				6065E254295D875200723DBB /* ViewController.swift in Sources */,
 				60B0E173296E180E00346FA0 /* CollectionViewCell.swift in Sources */,
 				60B0E17829709EB700346FA0 /* MapViewController.swift in Sources */,
+				60B0E1AF297543E200346FA0 /* CoinModuleModel.swift in Sources */,
 				6065E250295D875200723DBB /* AppDelegate.swift in Sources */,
+				60B0E1AD2975435F00346FA0 /* CoinModuleViewModel.swift in Sources */,
 				60B0E176296EE9DD00346FA0 /* WebViewController.swift in Sources */,
 				6065E252295D875200723DBB /* SceneDelegate.swift in Sources */,
 				60B0E170296E0FFF00346FA0 /* CollectionViewController.swift in Sources */,
@@ -499,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6065E260295D875300723DBB /* Build configuration list for PBXNativeTarget "week5" */ = {
+		6065E260295D875300723DBB /* Build configuration list for PBXNativeTarget "week6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6065E261295D875300723DBB /* Debug */,
@@ -519,6 +543,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		60B0E1B0297544C300346FA0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		60B0E1B32975465D00346FA0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -531,6 +571,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 60B0E17E297201E200346FA0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
+		};
+		60B0E1B1297544C300346FA0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60B0E1B0297544C300346FA0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		60B0E1B42975465D00346FA0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60B0E1B32975465D00346FA0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

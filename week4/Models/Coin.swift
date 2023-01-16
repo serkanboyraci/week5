@@ -8,12 +8,12 @@
 import Foundation
 
 struct Coin : Decodable {
-    let id, symbol, xxxx: String?
+    let id, symbol, name: String?
     
-    enum CodingKeys: String, CodingKey {
-    case id, symbol
-    case xxxx = "name"
-    }
+    //enum CodingKeys: String, CodingKey {
+    //case id, symbol
+    //case xxxx = "name" //to not take plain values.
+    //}
 }
 
 

@@ -14,7 +14,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
         <!--Coins-->
         <scene sceneID="meW-s9-fv8">
             <objects>
-                <viewController storyboardIdentifier="TableViewController" id="bvh-Yb-uqv" customClass="TableViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableViewController" id="bvh-Yb-uqv" customClass="TableViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qQf-Ib-WW7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,33 +94,53 @@
                                     <outlet property="delegate" destination="bvh-Yb-uqv" id="IJq-Kv-de0"/>
                                 </connections>
                             </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilz-2a-YJ8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Aec-Am-Qbc">
+                                        <rect key="frame" x="186.66666666666666" y="345" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstItem="Aec-Am-Qbc" firstAttribute="centerY" secondItem="ilz-2a-YJ8" secondAttribute="centerY" id="126-zR-4hf"/>
+                                    <constraint firstItem="Aec-Am-Qbc" firstAttribute="centerX" secondItem="ilz-2a-YJ8" secondAttribute="centerX" id="IDw-6c-Hfy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Df-jm-VSB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="T6N-eI-3C6" firstAttribute="top" secondItem="BEV-pT-nzT" secondAttribute="bottom" id="4yo-1P-6LI"/>
+                            <constraint firstItem="T6N-eI-3C6" firstAttribute="top" secondItem="BEV-pT-nzT" secondAttribute="bottom" id="7AQ-VN-Y7W"/>
                             <constraint firstItem="T6N-eI-3C6" firstAttribute="bottom" secondItem="9Df-jm-VSB" secondAttribute="bottom" id="7pC-WN-AY4"/>
+                            <constraint firstItem="ilz-2a-YJ8" firstAttribute="leading" secondItem="BEV-pT-nzT" secondAttribute="leading" id="A61-NF-Pkb"/>
                             <constraint firstItem="BEV-pT-nzT" firstAttribute="trailing" secondItem="T6N-eI-3C6" secondAttribute="trailing" id="MEo-BU-Suw"/>
+                            <constraint firstItem="9Df-jm-VSB" firstAttribute="bottom" secondItem="ilz-2a-YJ8" secondAttribute="bottom" id="N03-HR-QEW"/>
                             <constraint firstItem="BEV-pT-nzT" firstAttribute="leading" secondItem="T6N-eI-3C6" secondAttribute="leading" id="eNA-Ck-I8L"/>
+                            <constraint firstItem="ilz-2a-YJ8" firstAttribute="top" secondItem="9Df-jm-VSB" secondAttribute="top" id="f7m-aF-1xP"/>
                             <constraint firstAttribute="trailing" secondItem="BEV-pT-nzT" secondAttribute="trailing" id="h3d-s1-LsD"/>
                             <constraint firstItem="BEV-pT-nzT" firstAttribute="top" secondItem="9Df-jm-VSB" secondAttribute="top" id="iVY-wh-8Ii"/>
+                            <constraint firstItem="ilz-2a-YJ8" firstAttribute="trailing" secondItem="BEV-pT-nzT" secondAttribute="trailing" id="k45-sO-Lpz"/>
                             <constraint firstItem="BEV-pT-nzT" firstAttribute="leading" secondItem="qQf-Ib-WW7" secondAttribute="leading" id="xna-Dq-kVY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Coins" image="bitcoinsign" catalog="system" selectedImage="bitcoinsign" id="nwq-fk-agk"/>
                     <connections>
+                        <outlet property="indicator" destination="Aec-Am-Qbc" id="0nP-G1-YKy"/>
+                        <outlet property="loadingView" destination="ilz-2a-YJ8" id="TH9-Fu-quE"/>
                         <outlet property="searchBar" destination="BEV-pT-nzT" id="SId-GE-rBZ"/>
                         <outlet property="tableView" destination="T6N-eI-3C6" id="lqA-43-h1q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7n6-St-dKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="4"/>
+            <point key="canvasLocation" x="1171.7557251908397" y="3.5211267605633805"/>
         </scene>
         <!--Web-->
         <scene sceneID="hEK-Wm-GxK">
             <objects>
-                <viewController id="bCF-Q3-PiM" customClass="WebViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bCF-Q3-PiM" customClass="WebViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qJ-3i-jA4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +179,7 @@
         <!--Item-->
         <scene sceneID="5Lm-hY-ufB">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" id="HZ9-9t-zP5" customClass="MapViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="HZ9-9t-zP5" customClass="MapViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j2u-CF-YD6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +213,7 @@
         <!--Collection View Controller-->
         <scene sceneID="foE-Sd-4ow">
             <objects>
-                <viewController storyboardIdentifier="CollectionViewController" id="f4G-2X-esM" customClass="CollectionViewController" customModule="week5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollectionViewController" id="f4G-2X-esM" customClass="CollectionViewController" customModule="week6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDo-XB-2gD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,6 +287,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
